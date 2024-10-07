@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: "PixelPass"
+
+  #mongo configurations
+  data:
+    auto-index-creation: "true"
+    mongodb:
+      uri: "mongodb+srv://kallol008:password@newclusterr.cqpyfa4.mongodb.net/?retryWrites=true&w=majority&appName=NewClusterr"
+      database: "PixelPass"
+
+  #redis configuration
+  redis:
+    host: "locahost"
+    port: "6379"
+  #caching type
+  cache:
+    type: "redis"
+
+  kafka:
+    bootstrap-servers: "localhost:9092"
+    producer:
+      key-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+      value-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+
+server:
+  servlet:
+    context-path: "/pixelpass"
